@@ -179,6 +179,7 @@ body {
 .laderboardStats {
     display: none;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .cardLader {
@@ -316,6 +317,10 @@ body {
         font-weight: 700;
         justify-content: center;
     }
+
+    .laderboardStats {
+        margin-bottom: 30px;
+    }
 } 
 
 @media (min-width: 501px) and (max-width: 860px) {
@@ -427,5 +432,9 @@ body {
         font-size: 1.5rem;
         font-weight: 700;
         justify-content: center;
+    }
+
+    .laderboardStats {
+        margin-bottom: 30px;
     }
 } 
