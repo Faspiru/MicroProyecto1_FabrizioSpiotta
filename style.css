@@ -146,7 +146,7 @@ body {
 
 .card .cardFront {
     background-color: #4a80dd;
-    background-image: url(/FrontImage.png);
+    background-image: url(./FrontImage.png);
     transform: perspective(500px) rotateY(0deg);
     border-radius: 5px;
 }
@@ -205,10 +205,8 @@ body {
     justify-content: center;
 }
 
-/* .unimetImage {
-    width: 146px;
-    height: 146px;
-    border-radius: 5px;
-    margin-right: 0px;
+/* @media only screen and (max-width: 700px) {
+
+
 } */
 
