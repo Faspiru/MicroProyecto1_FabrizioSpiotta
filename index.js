@@ -32,6 +32,7 @@ function clickButtonInicio(buttonReiniciar) {
     const buttonIniciar = document.getElementById("iniciarButton")
     document.getElementById("Inicio-container").style.justifyContent = "start";
     
+    nombreUsuario.disabled = true
     buttonReiniciar.disabled = false
     buttonReiniciar.style.cursor = "pointer"
     buttonReiniciar.style.display = "flex"
@@ -155,7 +156,6 @@ buttonIniciar.addEventListener("click", () => {
     if (value == "") {
         alert("Porfavor ingrese un nombre para iniciar")
     } else {
-        nombreUsuario.disabled = true
         clickButtonInicio(buttonReiniciar)
     }
 })
