@@ -151,7 +151,7 @@ function runTime() {
 }
 
 buttonIniciar.addEventListener("click", () => {
-    localStorage.clear()
+    nombreUsuario.disabled = true
     const {value} = nombreUsuario
     if (value == "") {
         alert("Porfavor ingrese un nombre para iniciar")
@@ -162,6 +162,7 @@ buttonIniciar.addEventListener("click", () => {
 
 buttonReiniciar.addEventListener("click", () => {
     laderboardCode.innerHTML = ""
+    nombreUsuario.disabled = true
     clearInterval(setIntervalId)
     paresConseguidos = 0
     tiempo = 180
@@ -222,6 +223,7 @@ revealPhoto = (id) => {
 
             paresConseguidos++
             if (paresConseguidos  == 8) {
+                nombreUsuario.disabled = false
                 const {value} = nombreUsuario
                 saveScore(value, scoreQueTeniaElUsuario)
                 clearInterval(setIntervalId)
