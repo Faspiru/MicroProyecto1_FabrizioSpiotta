@@ -123,8 +123,6 @@ function getLocalStorageData () {
     return laderboard
 }
 
-
-
 function blockCards() {
     for (let index = 1; index <= 16; index++) {
         let puttingPhotoCard = document.getElementById("cardBack"+index)
@@ -154,19 +152,31 @@ function runTime() {
 
 buttonIniciar.addEventListener("click", () => {
     localStorage.clear()
-    clickButtonInicio(buttonReiniciar)
+    const {value} = nombreUsuario
+    if (value == "") {
+        alert("Porfavor ingrese un nombre para iniciar")
+    } else {
+        clickButtonInicio(buttonReiniciar)
+    }
 })
 
 buttonReiniciar.addEventListener("click", () => {
-    clickButtonReinicio()
+    laderboardCode.innerHTML = ""
     clearInterval(setIntervalId)
     paresConseguidos = 0
     tiempo = 180
     timer = false
     scoreQueTeniaElUsuario = 0
+    const {value} = nombreUsuario
+    if (value == "") {
+        alert("Porfavor ingrese un nombre para iniciar")
+    } else {
+        clickButtonReinicio()
+    }
 })
 
 revealPhoto = (id) => {
+
     if (timer == false) {
         runTime()
         timer = true
@@ -225,8 +235,9 @@ revealPhoto = (id) => {
                 Object.keys(laderboard).forEach((name, indice) => {
                     laderboardCode.innerHTML += `
                     <h2 class = "laderText" id = "laderText">
-                    ${indice + 1}. ${name}: ${laderboard[name]} puntos
-                    </h2>`
+                        ${indice + 1}. ${name}: ${laderboard[name]} puntos
+                    </h2>
+                    `
                 })
             }
         } else {
