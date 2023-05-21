@@ -146,7 +146,6 @@ body {
 
 .card .cardFront {
     background-color: #4a80dd;
-    background-image: url(/FrontImage.png);
     transform: perspective(500px) rotateY(0deg);
     border-radius: 5px;
 }
