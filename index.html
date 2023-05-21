@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria Unimet</title>
+    <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+ <div class="Inicio-container" id = "Inicio-container">
+    <div class="Inicio-info">
+        <h1 class ="title">¡BIENVENIDO A MEMORIA UNIMET!</h1>
+        <h4 class = "subtitle">
+            Hola Usuario! para poder comenzar, es necesario que ingreses tu nombre
+        </h4>
+    </div>
+    <div class = "Input-container" id = "Input-container" >
+        <input type="text" name="inputQuery" id="inputQuery" class="nombreInput"
+        placeholder="Ingrese su nombre"
+        />
+        <button type="button" class="iniciarButton" id ="iniciarButton">
+            INICIAR
+        </button>
+        <button type="button" class="reiniciarButton" id ="reiniciarButton">
+            REINICIAR
+        </button>
+    </div>
+    <div class = "EndGameInfo" id = "EndGameInfo">
+        <h2 class = "finalMessage" id = "finalMessage">
+        </h2>
+        <h2 class = "laderTitle" id = "laderTitle">
+            ¡LADERBOARD!
+        </h2>
+        <div class = "laderboardStats" id = "laderboardStats">
+            <div class = "cardLader" id = "cardLader">
+            </div>
+        </div>
+    </div>
+    <div class = "GameInitialized" id = "GameInitialized">
+        <div class = "tablero" id = "tablero">
+        </div>
+        <div class = "stats" id = "stats">
+        </div>
+    </div>
+ </div>   
+ <script src="./index.js"></script>
+</body>
+</html>
