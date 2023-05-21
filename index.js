@@ -151,11 +151,11 @@ function runTime() {
 }
 
 buttonIniciar.addEventListener("click", () => {
-    nombreUsuario.disabled = true
     const {value} = nombreUsuario
     if (value == "") {
         alert("Porfavor ingrese un nombre para iniciar")
     } else {
+        nombreUsuario.disabled = true
         clickButtonInicio(buttonReiniciar)
     }
 })
